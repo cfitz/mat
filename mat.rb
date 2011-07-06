@@ -9,6 +9,11 @@ require 'repository'
 require 'configuration'
 
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['admin', 'admin']
+end
+
+
 get "/" do
   "<img src='images/mat.jpg' alt='Hi, I'm mat' />"  
 end

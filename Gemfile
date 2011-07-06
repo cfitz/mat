@@ -5,6 +5,7 @@ gem 'nokogiri'
 gem 'rsolr'
 gem 'rsolr-ext'
 gem 'rest-client' 
+gem 'heroku'
 
 group :development, :test do
 	gem 'rack-test'
