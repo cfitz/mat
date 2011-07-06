@@ -1,0 +1,135 @@
+
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+  <mods:typeOfResource>cartographic</mods:typeOfResource>
+  <mods:genre authority="marcgt">map</mods:genre>
+  <mods:accessCondition displayLabel="Copyright Stanford University. Stanford, CA 94305. (650) 723-2300." type="useAndReproduction">Stanford University Libraries and Academic Information Resources - Terms of Use SULAIR Web sites are subject to Stanford University&apos;s standard Terms of Use (See http://www.stanford.edu/home/atoz/terms.html) These terms include a limited personal, non-exclusive, non-transferable license to access and use           the sites, and to download - where permitted - material for personal,           non-commercial, non-display use only. Please contact the University           Librarian to request permission to use SULAIR Web sites and contents beyond           the scope of the above license, including but not limited to republication           to a group or republishing the Web site or parts of the Web site. SULAIR           provides access to a variety of external databases and resources, which           sites are governed by their own Terms of Use, as well as contractual access           restrictions. The Terms of Use on these external sites always govern the           data available there. Please consult with library staff if you have           questions about data access and availability.</mods:accessCondition>
+  <mods:identifier displayLabel="Original McLaughlin Book Number (1995 edition)" type="local">18</mods:identifier>
+  <mods:titleInfo>
+    <mods:title>AMERICQVE | SEPTENTRIONALE </mods:title>
+    <mods:subTitle>Second of 6 States</mods:subTitle>
+  </mods:titleInfo>
+  <mods:name authority="local" type="personal">
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="text">creator</mods:roleTerm>
+    </mods:role>
+    <mods:namePart>Par le Sr. Sanson d&apos;Abbeville Geographe du Roy.</mods:namePart>
+  </mods:name>
+  <mods:subject authority="">
+    <mods:cartographics>
+      <mods:scale>[ca. 1:40,000,000],.</mods:scale>
+    </mods:cartographics>
+  </mods:subject>
+  <mods:subject authority="">
+    <mods:cartographics>
+      <mods:scale></mods:scale>
+      <mods:coordinates>W1730000 W0100000 N840000 N071000</mods:coordinates>
+      <mods:projection></mods:projection>
+    </mods:cartographics>
+  </mods:subject>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm>Paris</mods:placeTerm>
+    </mods:place>
+    <mods:dateCreated keyDate="yes" qualifier="inferred">1662</mods:dateCreated>
+  </mods:originInfo>
+  <mods:identifier displayLabel="Updated McLaughlin Book Number" type="local">18-02 </mods:identifier>
+  <mods:physicalDescription>
+    <mods:extent>19.8 x 27.9 cm. including border.</mods:extent>
+  </mods:physicalDescription>
+  <mods:note type=" ">Additional variations mentioned by P. Burden:Zunners	1679, see Checklist Entry 90.Ribbius	1682, see Checklist Entry 89, with States of both indented and flat northern coastline for California.Marret	             1694, see Checklist Entry 119.Châtelain	 ca.1735, see Checklist Entry 91.</mods:note>
+  <mods:name authority="local" type="personal">
+    <mods:namePart>Sanson, Nicolas</mods:namePart>
+  </mods:name>
+  <mods:note displayLabel="state_note">California with nearly flat northern coast sloping up to east. Title cartouche of scrollwork (upper left).Engraved by: A Peyrounin sculp. (lower left).Issued in his: L&apos;Amerique en plusieurs cartes, &amp;/en divers traittés de geographie, et d&apos;histoire, Paris, 1657.Issued in his: L&apos;Amerique, en plusieurs cartes nouvelles, et exactes, &amp;c. en divers traitez de geographie, et d&apos;histoire ..., Paris, 1662. Reissued [1667?].</mods:note>
+  <mods:identifier displayLabel="FileMaker Pro Record Number" type="local">979</mods:identifier>
+  <mods:note displayLabel="general_state_note">BN Sanson II A(1) and Sanson IIC; UCB; Ashley-Baynton-Williams; Burden 324 (Plate 324); L.C. 1151, 1152, 1153.</mods:note>
+  <mods:note displayLabel="state_node_5">c.1667,  same as State 2, but with addition of small plate number &quot;I&quot; (bottom right).</mods:note>
+  <mods:note displayLabel="state_node_6">With imprint A PARIS chez L’Auteur aux Galeries du Louvre 1699.</mods:note>
+  <mods:note displayLabel="state_node_1">As above; with imprint Auec priuilege pour vingt ans 1657.</mods:note>
+  <mods:note displayLabel="state_node_7">1705, with addition to title cartouche: A PARIS chez L’auteur auoc Galleries du Louvre 1705.   Issued in:  Introduction a la geographie in plusieurs cartes avec leur explication. / Par Les Srs Sanson, Geographes ordinaires du Roy. -- A Paris : Dans le cloitre de St. Nicolas du Louvre, MDCCVII [1707].</mods:note>
+  <mods:note displayLabel="state_node_8">1726, with additions to title cartouche:   A PARIS chez L&apos;auteur aux Galleries du Louvre, 1705; Dans la ruë Froimanteau vis à vis le Louvre 1726.  California with nearly flat northern coast sloping up to east, but also joining to mainland.  Text above California states: L&apos;on croit a present que la Terre de Californie est jointe au Nouveau Mexique.  Great Lakes are complete.  &quot;fol.110&quot; (top right).</mods:note>
+  <mods:note displayLabel="state_node_4">[1662], with additions to title cartouche: A PARIS chez Pierre Mariette, rue S.Iacques a l&apos;Esperance.  California with nearly flat northern coast sloping up to east.  Terre de Iesso to northwest.  Great Lakes are open-ended to the west.  Date is removed.</mods:note>
+  <mods:subject>
+    <mods:topic>California as an island--Maps--1662?</mods:topic>
+    <mods:topic>North America--Maps--To 1800</mods:topic>
+    <mods:topic>North America--Maps--1662?</mods:topic>
+  </mods:subject>
+  <mods:identifier displayLabel="SU DRUID" type="local">druid:bb110sm8219</mods:identifier>
+  <mods:genre>Early Maps</mods:genre>
+  <mods:genre>Digital Maps</mods:genre>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:nonSort>The</mods:nonSort>
+      <mods:title>mapping of California as an island</mods:title>
+      <mods:subTitle>an illustrated checklist</mods:subTitle>
+    </mods:titleInfo>
+    <mods:titleInfo type="alternative">
+      <mods:title>California as an island</mods:title>
+    </mods:titleInfo>
+    <mods:name type="personal">
+      <mods:namePart>McLaughlin, Glen</mods:namePart>
+      <mods:namePart type="date">1934-</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="text">creator</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name type="personal">
+      <mods:namePart>Mayo, Nancy H.</mods:namePart>
+    </mods:name>
+    <mods:name type="corporate">
+      <mods:namePart>California Map Society</mods:namePart>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">bibliography</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm authority="marccountry" type="code">cau</mods:placeTerm>
+      </mods:place>
+      <mods:place>
+        <mods:placeTerm type="text">[Saratoga, CA]</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>California Map Society</mods:publisher>
+      <mods:dateIssued>c1995</mods:dateIssued>
+      <mods:dateIssued encoding="marc" keyDate="yes">1995</mods:dateIssued>
+      <mods:edition>1st ed.</mods:edition>
+      <mods:issuance>monographic</mods:issuance>
+    </mods:originInfo>
+    <mods:physicalDescription>
+      <mods:form authority="marcform">print</mods:form>
+      <mods:extent>xvi, 134, [7] p. : ill., maps ; 28 cm.</mods:extent>
+    </mods:physicalDescription>
+    <mods:note displayLabel="statement of responsibility">Glen McLaughlin with Nancy H. Mayo.</mods:note>
+    <mods:note>Includes bibliographical references (p. xv-xvi) and indexes.</mods:note>
+    <mods:subject>
+      <mods:geographicCode authority="marcgac">n-us-ca</mods:geographicCode>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:topic>Cartography</mods:topic>
+      <mods:geographic>California</mods:geographic>
+      <mods:topic>History</mods:topic>
+      <mods:genre>Sources</mods:genre>
+    </mods:subject>
+    <mods:subject authority="lcsh">
+      <mods:geographic>California</mods:geographic>
+      <mods:topic>Maps</mods:topic>
+      <mods:topic>Early works to 1800</mods:topic>
+      <mods:genre>Bibliography</mods:genre>
+      <mods:genre>Catalogs</mods:genre>
+    </mods:subject>
+    <mods:classification authority="lcc">GA413 .M38 1995</mods:classification>
+    <mods:classification authority="ddc" edition="21">912.794</mods:classification>
+    <mods:identifier displayLabel="Symphony Catalog Key" type="local">3306259</mods:identifier>
+    <mods:identifier invalid="yes" type="isbn">01888126000</mods:identifier>
+    <mods:identifier type="lccn">97119748</mods:identifier>
+    <mods:identifier type="uri">http://collections.stanford.edu/bookreader-public/view.jsp?id=00021264#1</mods:identifier>
+    <mods:location>
+      <mods:url usage="primary display">http://collections.stanford.edu/bookreader-public/view.jsp?id=00021264#1</mods:url>
+    </mods:location>
+    <mods:recordInfo>
+      <mods:descriptionStandard>aacr2</mods:descriptionStandard>
+      <mods:recordContentSource authority="marcorg">DNA</mods:recordContentSource>
+      <mods:recordCreationDate encoding="marc">960319</mods:recordCreationDate>
+      <mods:recordIdentifier>a3306259</mods:recordIdentifier>
+    </mods:recordInfo>
+  </mods:relatedItem>
+</mods:mods>
