@@ -24,8 +24,7 @@ module Stanford
       fedora.chop! if /\/$/.match(fedora)
       solr.chop! if  /\/$/.match(solr)
       @fedora = fedora
-      @solr = RSolr.connect(:url => solr )
-    
+      @solr = RSolr.connect(:url => solr )    
     end
 
  
@@ -42,15 +41,15 @@ module Stanford
         uri = URI.parse(@fedora + '/objects/' + pid + '/datastreams/' + dsID + '/content') 
         RestClient.get(uri.to_s)
     rescue => e
-        p e
-        return nil     
+      e.response           
     end
     
     # This method replaces a datastream in fedora. Inputs the pid, dsID, and xml string
     def put_datastream(pid, dsID, xml)
          uri = URI.parse(@fedora + '/objects/' + pid + '/datastreams/' + dsID ) 
-         res = RestClient.put uri.to_s, xml, :content_type => "application/xml"
-        return res
+         RestClient.put(uri.to_s, xml, :content_type => "application/xml")
+    rescue => e
+           e.response         
     end
   
   
@@ -95,12 +94,29 @@ module Stanford
   # </documents>
   
   # conducts the search. takes application and form names (strings), the query xml (string) and page number and page size (integers)
-    def search(application, form, queryXML, page = 1, page_size = 25)
+  # Currently, we're not using the "application" param for anything, but it is there for future use. So
+    def search(application, form, queryXML)
     
       xml = Nokogiri::XML(queryXML)
       params = {:fq => ["mdform_tag_field:#{form}"], :fl => ["*"], :qt => "dismax"}
       
-    
+      page_number = xml.search("//page-number")
+      page_size = xml.search("//page-size")
+      
+      if !page_number.first.nil? and !page_number.first.content.empty?
+        page =  page_number.first.content
+      else
+        page = 1
+      end
+      
+      if !page_size.first.nil? and !page_size.first.content.empty?
+        page_size = page_size.first.content
+      else
+        page_size = 25
+      end
+      
+ 
+      
       # first extract the fulltext query, one is present
       fulltext = xml.search('//query[not(@name)]')  
       if !fulltext.first.nil? and !fulltext.first.content.empty?
@@ -115,10 +131,8 @@ module Stanford
         end
       end
       
-      
-     puts params.inspect + "\n%%%%%%"
       # get response from SOLR
-      solr_docs = @solr.paginate(page, page_size, "select", :params => params) 
+      solr_docs = @solr.paginate(page.to_i, page_size.to_i, "select", :params => params) 
       # store this in the hash so we can access it later
       solr_docs["page"] = page.to_s
       solr_docs["page_size"] = page_size.to_s
@@ -169,47 +183,6 @@ module Stanford
       end
     end
 
-
-#
-# DEPRECIATED. JUST HERE TO REMIND ME WHAT I WAS DOING
-#
-=begin    
-    # this takes the solr response and builds the <documents> xml node
-    def documents_results(solr_docs)
-      # prepare response
-      xml_doc = Nokogiri::XML("<documents/>")
-      xml_doc.root["total"] = solr_docs["response"]["numFound"].to_s
-      xml_doc.root["page-size"] = solr_docs["page_size"]
-      xml_doc.root["page-number"] = solr_docs["page"]
-      
-      solr_docs["response"]["docs"].each{ |solr_doc| xml_doc.root << document_results(solr_doc, xml_doc, solr_docs["mods_queries"] ) }
-      return xml_doc.to_xml
-    end
-  
-    #this takes a solr response document and converts it to the xml needed for the response
-    def document_results(solr_doc, xml_doc, queries)
-      doc_node = Nokogiri::XML::Node.new("document", xml_doc)
-      solr_doc["fgs_createdDate_date"] ? doc_node["created"] = solr_doc["fgs_createdDate_date"] : doc_node["created"]  = "0"
-      solr_doc["fgs_createdDate_date"] ? doc_node["last-modified"] = solr_doc["fgs_createdDate_date"] : doc_node["last-nodified"] = "0"
-      doc_node["name"] = solr_doc["id"]
-      
-      queries.each { |k, v| doc_node << detail_results(solr_doc, xml_doc, k, v)}
-      
-      return doc_node 
-    end
-  
-    #this takes a solr response document and converts it to the xml needed for the document details.
-    def detail_results(solr_doc, xml_doc, attribute, value)
-      
-      details_node =  Nokogiri::XML::Node.new("details", xml_doc)
-      detail = Nokogiri::XML::Node.new("detail", xml_doc)
-      details_node << detail
-              
-      
-      return details_node
-
-    end  
-=end
 
   end  
 end

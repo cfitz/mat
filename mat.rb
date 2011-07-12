@@ -6,7 +6,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'repository'
-require 'configuration'
+require 'config/environment'
 
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
@@ -26,10 +26,6 @@ post '/search/:application/:form' do
   content_type :xml
   repository = Stanford::Repository.new(DOR_URI, SOLR_URI )
   xml = request.body.read
-  if(xml.empty?)
-      error = 400
-      return
-  end
   "#{repository.search(params[:application], params[:form], xml)}"
 end
 

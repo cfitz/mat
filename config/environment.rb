@@ -1,3 +1,11 @@
+require "rubygems"
+require "bundler"
+Bundler.setup
+
+require 'sinatra'
+
+
+
 configure :production do
   DOR_URI = 'http://fedoraAdmin:fedoraAdmin@dor-dev.stanford.edu/fedora/'
   SOLR_URI= 'http://dor-dev.stanford.edu/solr/'
@@ -12,3 +20,4 @@ configure :test do
   DOR_URI = 'http://fedoraAdmin:fedoraAdmin@dor-dev.stanford.edu/fedora/'
   SOLR_URI= 'http://dor-dev.stanford.edu/solr/'
 end
+

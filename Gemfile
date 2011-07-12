@@ -14,4 +14,5 @@ group :development, :test do
   gem 'ruby-debug-base'
   gem 'rspec'
   gem 'equivalent-xml'
+  gem 'fakeweb'
 end
