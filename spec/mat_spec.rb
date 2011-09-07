@@ -68,4 +68,22 @@ describe "MAT" do
     
   end
   
+  
+  describe "get mods template" do
+    before(:each) do 
+      @orbeon = mock(Stanford::Orbeon)
+      Stanford::Orbeon.should_receive(:new).with(ORBEON_URI).and_return(@orbeon)
+    end
+    
+    it "should get the XML template for a new object" do
+      #"#{orbeon.get_mods_template(params[:application], params[:form], params[:pid])}"
+      @orbeon.should_receive(:get_mods_template).with("fooApp", "barForm", "a:druid").and_return("<mods:mods/>")
+      authorize 'admin', 'admin'
+      get "/orbeon/mods/fooApp/barForm/a:druid"
+      last_response.should be_ok  
+      
+    end
+  end
+    
+  
 end

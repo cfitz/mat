@@ -6,6 +6,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'repository'
+require 'orbeon'
 require 'config/environment'
 
 
@@ -46,4 +47,15 @@ put '/crud/:application/:form/data/:pid/data.xml' do
    repository = Stanford::Repository.new(DOR_URI, SOLR_URI )
    "#{repository.put_datastream(params[:pid], 'descMetadata', request.body.read )}"
 end
+
+#### Orbeon Related #####
+# Gets the default XML for a mods new object 
+get '/orbeon/mods/:application/:form/:pid' do
+  content_type :xml
+  orbeon = Stanford::Orbeon.new(ORBEON_URI)
+  "#{orbeon.get_mods_template(params[:application], params[:form], params[:pid])}"
+end
+
+
+
 
